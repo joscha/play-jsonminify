@@ -15,7 +15,7 @@ object JsonPlugin extends Plugin {
     (_ ** "*.json"),
     jsonminifyEntryPoints in Compile,
     { (name, min) => name.replace(".json", if (min) ".min.json" else ".json") },
-    { StylusCompiler.compile _ },
+    { JsonCompiler.compile _ },
     jsonminifyOptions in Compile
   )
 

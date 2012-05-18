@@ -8,7 +8,7 @@ import scala.io.Source
 
 import java.io.File
 
-object StylusCompiler {
+object JsonCompiler {
 
   def compile(file: File, options: Seq[String]): (String, Option[String], Seq[File]) = {
       val data = Source.fromFile(file) mkString
