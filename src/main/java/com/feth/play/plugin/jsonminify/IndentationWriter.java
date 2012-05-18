@@ -37,6 +37,8 @@ public class IndentationWriter extends StringWriter {
 	}
 
 	private void indent() {
-		super.write(String.format("%" + (level * 4) + "s", ""));
+		if(level > 0) {
+			super.write(String.format("%" + (level * 4) + "s", ""));
+		}
 	}
 }
