@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.feth</groupId>
+    <artifactId>play-jsonminify</artifactId>
+    <packaging>jar</packaging>
+    <description>SBT plugin for handling JSON minification in Play 2.x</description>
+    <version>0.1.0</version>
+    <name>play-jsonminify</name>
+    <organization>
+        <name>com.feth</name>
+    </organization>
+    <properties>
+        <sbtVersion>0.11.2</sbtVersion>
+        <scalaVersion>2.9.1</scalaVersion>
+        <extraDependencyAttributes>+e:scalaVersion:#@#:+2.9.1:#@#:+revision:#@#:+2.0:#@#:+module:#@#:+sbt-plugin:#@#:+e:sbtVersion:#@#:+0.11.2:#@#:+organisation:#@#:+play:#@#:+branch:#@#:+@#:NULL:#@:#@#:</extraDependencyAttributes>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-tools.sbt</groupId>
+            <artifactId>sbt_2.9.1</artifactId>
+            <version>0.11.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.9.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>play</groupId>
+            <artifactId>sbt-plugin</artifactId>
+            <version>2.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>ScalaToolsMaven2Repository</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
