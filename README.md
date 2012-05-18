@@ -33,6 +33,19 @@ As well as unnecessary trailing commas will be stripped automatically.
 
 ## Installation
 
+Add the plugin and the repository to your application's `project/plugins.sbt`:
+
+    resolvers += "Play JSONminify repository" at "http://joscha.github.com/play-jsonminify/repo/"
+
+    addSbtPlugin("com.feth" % "play-jsonminify" % "0.1.0")
+
+This adds the JSON asset compiler to your Play project. `*.json` files beneath `app/assets` 
+will then be automatically compiled to `*.json` and `*.min.json` files. Files starting with 
+`_`-character will be left out from compilation as per Play convention.
+
+
+## Installation (build from source)
+
 First you must publish the plugin to your Play 2.0 repository. You
 will have to specify your top level play directory and the version:
 
@@ -41,10 +54,6 @@ will have to specify your top level play directory and the version:
 Then add the plugin to your application's `project/plugins.sbt`:
 
     addSbtPlugin("com.feth" % "play-jsonminify" % "0.1.0")
-
-This adds the JSON asset compiler to your Play project. `*.json` files beneath `app/assets` 
-will then be automatically compiled to `*.json` and `*.min.json` files. Files starting with 
-`_`-character will be left out from compilation as per Play convention.
 
 ### Settings
 
